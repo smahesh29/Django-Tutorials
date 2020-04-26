@@ -1,0 +1,10 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+    <form action="{%url 'name' %}" method="post">
+        {% csrf_token %}   
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+{% endblock content %}
+
+<!-- csrf = Cross-Site Request Forgery -->
